@@ -1,13 +1,16 @@
 <template>
   <v-toolbar dark color="primary">
-		<v-toolbar-title class="headline">
-			Zac Joffe
-		</v-toolbar-title>
-		<v-spacer></v-spacer>
-		<v-btn icon>
-			GitHub
-		</v-btn>
-	</v-toolbar>
+    <v-toolbar-title class="headline">Zac Joffe</v-toolbar-title>
+    <v-spacer></v-spacer>
+
+    <v-btn icon href="https://github.com/ZacJoffe">
+      <v-icon>mdi-github-circle</v-icon>
+    </v-btn>
+
+    <v-btn icon href="https://www.linkedin.com/in/zacjoffe/">
+      <v-icon>mdi-linkedin</v-icon>
+    </v-btn>
+  </v-toolbar>
 </template>
 
 <script>
