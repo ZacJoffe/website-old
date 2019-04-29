@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <Sidebar />
     <Toolbar />
     <!--
     <v-toolbar app>
@@ -27,12 +28,14 @@
 <script>
 //import HelloWorld from './components/HelloWorld'
 import Toolbar from './components/Toolbar'
+import Sidebar from './components/Sidebar'
 
 export default {
   name: 'App',
   components: {
     //HelloWorld
-    Toolbar
+    Toolbar,
+    Sidebar
   },
   data () {
     return {
