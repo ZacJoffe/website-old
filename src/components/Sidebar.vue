@@ -1,5 +1,5 @@
 <template>
-	<v-navigation-drawer>
+	<v-navigation-drawer v-model="enabled">
 		<v-toolbar flat>
 			<v-list-tile>
 				<v-list-tile-title class="title">
@@ -42,9 +42,13 @@ export default {
 					title: "Projects",
 					icon: "mdi-code-braces"
 				}
-			]
+			],
+			drawer: false
 		};
-  }
+	},
+	props: {
+		enabled: Boolean
+	}
 };
 </script>
 
