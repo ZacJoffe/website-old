@@ -11,13 +11,13 @@
 			<v-divider></v-divider>
 
 			<v-list dense class="pt-0">
-				<v-list-tile v-for="item in items" :key="item.title">
+				<v-list-tile v-for="link in links" :key="link.title" router :to="link.route">
 					<v-list-tile-action>
-						<v-icon>{{ item.icon }}</v-icon>
+						<v-icon>{{ link.icon }}</v-icon>
 					</v-list-tile-action>
 
 					<v-list-tile-action>
-						<v-list-tile-title>{{ item.title }}</v-list-tile-title>
+						<v-list-tile-title>{{ link.title }}</v-list-tile-title>
 					</v-list-tile-action>
 				</v-list-tile>
 			</v-list>
@@ -91,18 +91,21 @@ export default {
   },
   data () {
     return {
-			items: [
+			links: [
 				{
 					title: "Home",
-					icon: "mdi-home"
+					icon: "mdi-home",
+					route: "/"
 				},
 				{
 					title: "About",
-					icon: "mdi-information"
+					icon: "mdi-information",
+					route: "/about"
 				},
 				{
 					title: "Projects",
-					icon: "mdi-code-braces"
+					icon: "mdi-code-braces",
+					route: "/projects"
 				}
 			],
 			drawer: false
