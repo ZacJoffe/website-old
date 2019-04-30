@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
 		<v-navigation-drawer v-model="drawer" app>
 			<v-toolbar flat>
 				<v-list-tile>
@@ -38,6 +38,10 @@
 				</v-btn>
 			</v-toolbar-items>
 		</v-toolbar>
+
+		<v-content>
+			<router-view></router-view>
+		</v-content>
 		<!--
     <v-container flex>
       <v-layout>
