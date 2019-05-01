@@ -1,11 +1,19 @@
 <template>
   <div class="resume">
-    <pdf :src="link"></pdf>
+    <v-container grid-list-md>
+      <v-layout row wrap>
+        <v-flex justify-center>
+          <v-card>
+            <pdf :src="link"></pdf>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
 <script>
-import pdf from 'pdfvuer'
+import pdf from 'vue-pdf'
 
 export default {
   components: {
