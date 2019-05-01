@@ -1,6 +1,15 @@
 <template>
   <v-app dark>
-		<v-navigation-drawer v-model="drawer" app>
+		<v-navigation-drawer :mini-variant="mini" :temporary="temp" width="250" v-model="drawer" app>
+			<v-list>
+				<v-list-item v-if="mini" @click.stop="mini = !mini">
+					<v-list-item-action>
+						<v-icon>mdi-chevron-right</v-icon>
+					</v-list-item-action>
+				</v-list-item>
+
+			</v-list>
+			<!--
 			<v-toolbar flat>
 				<v-list-tile>
 					<v-list-tile-title class="title">
@@ -8,6 +17,7 @@
 					</v-list-tile-title>
 				</v-list-tile>
 			</v-toolbar> 
+			-->
 			<v-divider></v-divider>
 
 			<v-list dense class="pt-0">
@@ -110,9 +120,16 @@ export default {
 					title: "Projects",
 					icon: "mdi-code-braces",
 					route: "/projects"
+				},
+				{
+					title: "Resume",
+					icon: "",
+					route: "/resume"
 				}
 			],
-			drawer: false
+			drawer: false,
+			mini: false,
+			temp: false
     }
   },
   methods: {
