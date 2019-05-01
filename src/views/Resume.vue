@@ -5,7 +5,9 @@
         <v-flex justify-center>
           <v-card>
             <pdf :src="resumeLink"></pdf>
-            <v-btn @click="downloadResume">Download</v-btn>
+            <v-card-text>
+              <v-btn block round @click="downloadResume">Download</v-btn>
+            </v-card-text>
           </v-card>
         </v-flex>
       </v-layout>

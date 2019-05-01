@@ -123,7 +123,7 @@ export default {
 				},
 				{
 					title: "Resume",
-					icon: "",
+					icon: "mdi-file-document-box",
 					route: "/resume"
 				}
 			],
