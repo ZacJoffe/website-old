@@ -1,13 +1,21 @@
 <template>
   <v-app dark>
-		<v-navigation-drawer :mini-variant="mini" :temporary="temp" width="250" v-model="drawer" app>
-			<v-list>
-				<v-list-item v-if="mini" @click.stop="mini = !mini">
-					<v-list-item-action>
+		<v-navigation-drawer :mini-variant="mini" :clipped="mini" :temporary="temp" width="250" v-model="drawer" app justify-center>
+			<v-list dense class="pt-0">
+				<v-list-tile v-if="mini" @click.stop="mini = !mini">
+					<v-list-tile-action>
 						<v-icon>mdi-chevron-right</v-icon>
-					</v-list-item-action>
-				</v-list-item>
+					</v-list-tile-action>
+				</v-list-tile>
+				<v-list-tile v-else @click.stop="mini = !mini">
+					<v-list-tile-action>
+						<v-icon>mdi-chevron-left</v-icon>
+					</v-list-tile-action>
 
+					<v-list-tile-content>
+						<v-list-tile-title>Minimize</v-list-tile-title>
+					</v-list-tile-content>
+				</v-list-tile>
 			</v-list>
 			<!--
 			<v-toolbar flat>
@@ -26,15 +34,15 @@
 						<v-icon>{{ link.icon }}</v-icon>
 					</v-list-tile-action>
 
-					<v-list-tile-action>
+					<v-list-tile-content v-if="!mini">
 						<v-list-tile-title>{{ link.title }}</v-list-tile-title>
-					</v-list-tile-action>
+					</v-list-tile-content>
 				</v-list-tile>
 			</v-list>
 		</v-navigation-drawer>
 
-		<v-toolbar dark color="primary" app>
-			<v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+		<v-toolbar :clipped-left="mini" dark color="primary" app>
+			<v-toolbar-side-icon v-if="!mini" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 			<v-toolbar-title class="headline">Zac Joffe</v-toolbar-title>
 			<v-spacer></v-spacer>
 
@@ -127,8 +135,8 @@ export default {
 					route: "/resume"
 				}
 			],
-			drawer: false,
-			mini: false,
+			drawer: true,
+			mini: true,
 			temp: false
     }
   },
