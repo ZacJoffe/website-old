@@ -23,6 +23,21 @@
           </v-card>
         </v-flex>
       </v-layout>
+
+      <v-layout row wrap>
+        <v-flex justify-center>
+          <v-card>
+            <v-card-title primary-title class="headline">Programming Prospects</v-card-title>
+            <v-card-text>
+              Currently, I'm working as a Full Stack Developer at Emailtopia. I love to expose myself to other branches of software development on my own time. I'd love to learn SDL2 and make some games in C++, and try out the SDL bindings for Golang. I'd also love to make an NES emulator at some point.
+              
+              As for languages, I'm very interested in learning Rust.
+
+              I'd love to further contribute to open source projects that I often use and am passionate about (projects like Visual Studio Code, DXVK, Alacritty, QMK, etc).
+            </v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
     </v-container>
   </div>
 </template>
