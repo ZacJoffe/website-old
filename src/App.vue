@@ -58,7 +58,12 @@
 		</v-toolbar>
 
 		<v-content>
-			<router-view></router-view>
+			<!--
+			<transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeInUp">
+				-->
+			<transition name="fade">
+				<router-view></router-view>
+			</transition>
 		</v-content>
 		<!--
     <v-container flex>
