@@ -4,7 +4,7 @@
       <v-layout row wrap>
         <v-flex justify-center>
           <v-card>
-            <v-img :src="require('../assets/robot.jpg')"/>
+            <v-img :max-height="maxHeight" :src="require('../assets/robot.jpg')"/>
             <v-card-title primary-title>
               <div>
                 <div class="headline">Projects</div>
@@ -25,6 +25,22 @@
         <v-flex justify-center>
           <v-card>
             <v-card-title primary-title class="headline"><a href="https://github.com/ZacJoffe/screenshot">Screenshot App</a></v-card-title>
+
+            <v-card-title primary-title>
+              <v-flex>
+                <span class="headline">Screenshot App</span>
+              </v-flex>
+              <v-flex text-xs-right>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on }">
+                    <v-btn icon href="https://github.com/ZacJoffe/screenshot" v-on="on">
+                      <v-icon>mdi-git</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Source Code</span>
+                </v-tooltip>
+              </v-flex>
+            </v-card-title>
             <v-card-text>
               This is mainly a command line app written in Golang to automate screenshot taking and sharing for my Linux system. Inspired by <a href="https://github.com/ShareX/ShareX">ShareX</a>, an app I used to love back when I used Windows, this app takes screenshots of screen region and copies it to the clipboard. With a flag, you can instead upload the screenshot to <a href="https://imgur.com/">Imgur</a>. 
 
@@ -60,3 +76,19 @@
     </v-container>
   </div>
 </template>
+
+<script>
+
+export default {
+  data() {
+    return {
+
+    }
+  },
+  computed: {
+    maxHeight() {
+      return screen.height / 3
+    }
+  }
+}
+</script>
