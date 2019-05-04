@@ -165,6 +165,7 @@ export default {
   },
   mounted() {
 		this.onResize()
+		this.setToolbarTitle()
 		if (!this.isMobile) {
 			this.drawer = true
 		}
@@ -172,8 +173,11 @@ export default {
 	},
 	watch: {
 		$route() {
+			/*
 			var index = this.links.findIndex(link => link.route === this.$route.path)
 			this.toolbarTitle = this.links[index].toolbarTitle
+			*/
+			this.setToolbarTitle()
 		}
 	},
   methods: {
@@ -183,6 +187,10 @@ export default {
 		onResize() {
 			//this.isMobile = window.innerWidth < 600
 			this.isMobile = window.innerWidth < screen.width / 2
+		},
+		setToolbarTitle() {
+			var index = this.links.findIndex(link => link.route === this.$route.path)
+			this.toolbarTitle = this.links[index].toolbarTitle
 		}
 	},
 	computed: {
