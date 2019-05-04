@@ -1,21 +1,28 @@
 <template>
   <v-app dark>
-		<v-navigation-drawer :mini-variant="mini" :clipped="mini" :temporary="temp" width="250" v-model="drawer" app>
+		<v-navigation-drawer :mini-variant="isMini" :clipped="mini" :temporary="temp" width="250" v-model="drawer" app>
 			<v-list dense class="pt-0">
-				<v-list-tile v-if="mini" @click.stop="mini = !mini">
-					<v-list-tile-action>
-						<v-icon>mdi-chevron-right</v-icon>
-					</v-list-tile-action>
-				</v-list-tile>
-				<v-list-tile v-else @click.stop="mini = !mini">
-					<v-list-tile-action>
-						<v-icon>mdi-chevron-left</v-icon>
-					</v-list-tile-action>
+				<div v-if="!isMobile">
+					<v-list-tile v-if="mini" @click.stop="mini = !mini">
+						<v-list-tile-action>
+							<v-icon>mdi-chevron-right</v-icon>
+						</v-list-tile-action>
+					</v-list-tile>
+					<v-list-tile v-else @click.stop="mini = !mini">
+						<v-list-tile-action>
+							<v-icon>mdi-chevron-left</v-icon>
+						</v-list-tile-action>
 
-					<v-list-tile-content>
-						<v-list-tile-title>Minimize</v-list-tile-title>
-					</v-list-tile-content>
-				</v-list-tile>
+						<v-list-tile-content>
+							<v-list-tile-title>Minimize</v-list-tile-title>
+						</v-list-tile-content>
+					</v-list-tile>
+				</div>
+				<div v-else>
+
+					<v-list-tile>Navigate</v-list-tile>
+
+				</div>
 			</v-list>
 			<!--
 			<v-toolbar flat>
@@ -34,14 +41,14 @@
 						<v-icon>{{ link.icon }}</v-icon>
 					</v-list-tile-action>
 
-					<v-list-tile-content v-if="!mini">
+					<v-list-tile-content v-if="!isMini">
 						<v-list-tile-title>{{ link.title }}</v-list-tile-title>
 					</v-list-tile-content>
 				</v-list-tile>
 			</v-list>
 		</v-navigation-drawer>
 
-		<v-toolbar :clipped-left="mini" dark color="primary" app>
+		<v-toolbar :clipped-left="isMini" dark color="primary" app>
 			<v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 			<v-toolbar-title class="headline">Zac Joffe</v-toolbar-title>
 			<v-spacer></v-spacer>
@@ -95,10 +102,10 @@
       >
         <span class="mr-2">Latest Release</span>
       </v-btn>
-    </v-toolbar>
-
-    <v-content>
-      <HelloWorld/>
+    </v-toolbar>i
+i
+    <v-content>i
+      <HelloWorlid/>
     </v-content>
     -->
   </v-app>
@@ -140,15 +147,37 @@ export default {
 					route: "/resume"
 				}
 			],
-			drawer: true,
+			isMobile: false,
+			drawer: false,
 			mini: true,
 			temp: false
     }
+	},
+	beforeDestroy () {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.onResize, { passive: true })
+    }
+  },
+  mounted () {
+		this.onResize()
+		if (!this.isMobile) {
+			this.drawer = true
+		}
+		window.addEventListener('resize', this.onResize, { passive: true })
   },
   methods: {
     toggleDrawer(value) {
       this.drawer = value
-    }
-  }
+		},
+		onResize() {
+			//this.isMobile = window.innerWidth < 600
+			this.isMobile = window.innerWidth < screen.width / 2
+		}
+	},
+	computed: {
+		isMini() {
+			return (this.mini && !this.isMobile)
+		},
+	}
 }
 </script>
