@@ -4,10 +4,19 @@
       <v-layout row wrap>
         <v-flex justify-center>
           <v-card>
-            <v-card-title primary-title class="headline">Personal Projects</v-card-title>
+            <v-img :src="require('../assets/robot.jpg')"/>
+            <v-card-title primary-title>
+              <div>
+                <div class="headline">Projects</div>
+                <span class="grey--text">A collection of (mostly) personal projects that I've worked on.</span>
+              </div>
+            </v-card-title>
+            <!--
+            <v-card-title primary-title class="headline">Projects</v-card-title>
             <v-card-text>
-              A collection of personal projects that I've worked on over the last year or so, and some background information behind them.
+              A collection of (mostly) personal projects that I've worked on over the last year or so, and some background information behind them.
             </v-card-text>
+            -->
           </v-card>
         </v-flex>
       </v-layout>
