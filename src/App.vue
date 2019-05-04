@@ -50,7 +50,7 @@
 
 		<v-toolbar :clipped-left="isMini" dark color="primary" app>
 			<v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-			<v-toolbar-title class="headline">Zac Joffe</v-toolbar-title>
+			<v-toolbar-title class="headline">{{ toolbarTitle }}</v-toolbar-title>
 			<v-spacer></v-spacer>
 
 			<v-toolbar-items>
@@ -128,43 +128,54 @@ export default {
 			links: [
 				{
 					title: "Home",
+					toolbarTitle: "Zac Joffe",
 					icon: "mdi-home",
 					route: "/"
 				},
 				{
 					title: "About",
+					toolbarTitle: "About Me",
 					icon: "mdi-information",
 					route: "/about"
 				},
 				{
 					title: "Projects",
+					toolbarTitle: "My Projects",
 					icon: "mdi-code-braces",
 					route: "/projects"
 				},
 				{
 					title: "Resume",
+					toolbarTitle: "My Resume",
 					icon: "mdi-file-document-box",
 					route: "/resume"
 				}
 			],
+			toolbarTitle: "Zac Joffe",
 			isMobile: false,
 			drawer: false,
 			mini: true,
 			temp: false
     }
 	},
-	beforeDestroy () {
+	beforeDestroy() {
     if (typeof window !== 'undefined') {
       window.removeEventListener('resize', this.onResize, { passive: true })
     }
   },
-  mounted () {
+  mounted() {
 		this.onResize()
 		if (!this.isMobile) {
 			this.drawer = true
 		}
 		window.addEventListener('resize', this.onResize, { passive: true })
-  },
+	},
+	watch: {
+		$route() {
+			var index = this.links.findIndex(link => link.route === this.$route.path)
+			this.toolbarTitle = this.links[index].toolbarTitle
+		}
+	},
   methods: {
     toggleDrawer(value) {
       this.drawer = value
