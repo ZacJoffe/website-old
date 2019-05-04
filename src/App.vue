@@ -54,13 +54,23 @@
 			<v-spacer></v-spacer>
 
 			<v-toolbar-items>
-				<v-btn icon href="https://github.com/ZacJoffe">
-					<v-icon>mdi-github-circle</v-icon>
-				</v-btn>
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on }">
+						<v-btn icon href="https://github.com/ZacJoffe" v-on="on">
+							<v-icon>mdi-github-circle</v-icon>
+						</v-btn>
+					</template>
+					<span>My GitHub</span>
+				</v-tooltip>
 
-				<v-btn icon href="https://www.linkedin.com/in/zacjoffe/">
-					<v-icon>mdi-linkedin</v-icon>
-				</v-btn>
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on }">
+						<v-btn icon href="https://www.linkedin.com/in/zacjoffe/" v-on="on">
+							<v-icon>mdi-linkedin</v-icon>
+						</v-btn>
+					</template>
+					<span>My LinkedIn</span>
+				</v-tooltip>
 			</v-toolbar-items>
 		</v-toolbar>
 
