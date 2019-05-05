@@ -2,7 +2,7 @@
   <div class="projects">
     <v-container grid-list-md>
       <v-layout row wrap>
-        <v-flex justify-center>
+        <v-flex xs12 justify-center>
           <v-card>
             <v-img :max-height="maxHeight" :src="require('../assets/robot.jpg')"/>
             <v-card-title primary-title>
@@ -21,7 +21,7 @@
         </v-flex>
       </v-layout>
 
-      <v-layout row wrap>
+      <v-layout>
         <v-flex justify-center>
           <v-card>
             <v-card-title primary-title>
@@ -29,7 +29,7 @@
               <v-flex text-xs-right>
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">
-                    <v-btn icon href="https://github.com/ZacJoffe/screenshot" v-on="on">
+                    <v-btn small icon href="https://github.com/ZacJoffe/screenshot" v-on="on">
                       <v-icon>mdi-git</v-icon>
                     </v-btn>
                   </template>
@@ -50,9 +50,11 @@
             </v-card-text>
           </v-card>
         </v-flex>
+      </v-layout>
 
-        <v-flex justify-center>
-          <v-card>
+      <v-layout row wrap>
+        <v-flex xs12 sm6 md4 justify-center>
+          <v-card height="100%">
             <v-card-title primary-title>
               <span class="headline">Website</span>
               <v-flex text-xs-right>
@@ -72,8 +74,8 @@
           </v-card>
         </v-flex>
 
-        <v-flex justify-center>
-          <v-card>
+        <v-flex xs12 sm6 md4 justify-center>
+          <v-card height="100%">
             <v-card-title primary-title>
               <span class="headline">Linux Configuration</span>
               <v-flex text-xs-right>
@@ -92,9 +94,12 @@
             </v-card-text>
           </v-card>
         </v-flex>
+      <!--
       </v-layout>
-        <v-flex justify-center>
-          <v-card>
+      <v-layout>
+        -->
+        <v-flex xs12 sm12 md4 justify-center>
+          <v-card height="100%">
             <v-card-title primary-title>
               <span class="headline">Rubik's Cube Solving Robot</span>
               <v-flex text-xs-right>
@@ -115,6 +120,7 @@
             </v-card-text>
           </v-card>
         </v-flex>
+      </v-layout>
     </v-container>
   </div>
 </template>
