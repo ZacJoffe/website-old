@@ -23,18 +23,6 @@
         </v-flex>
       </v-layout>
     </v-container>
-
-
-    <!--
-    <v-card>
-      <v-card-title primary-title>
-        <div>
-          <div class="headline">Zac Joffe</div>
-          <span class="grey--text">Software Engineering - University of Waterloo</span>
-        </div>
-      </v-card-title>
-    </v-card>
-    -->
   </div>
 </template>
 

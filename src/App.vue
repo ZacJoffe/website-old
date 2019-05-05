@@ -24,15 +24,7 @@
 
 				</div>
 			</v-list>
-			<!--
-			<v-toolbar flat>
-				<v-list-tile>
-					<v-list-tile-title class="title">
-						Navigate
-					</v-list-tile-title>
-				</v-list-tile>
-			</v-toolbar> 
-			-->
+
 			<v-divider></v-divider>
 
 			<v-list dense class="pt-0">
@@ -75,65 +67,17 @@
 		</v-toolbar>
 
 		<v-content>
-			<!--
-			<transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeInUp">
-				-->
 			<transition name="fade">
 				<router-view :isMobile="isMobile"></router-view>
 			</transition>
 		</v-content>
-		<!--
-    <v-container flex>
-      <v-layout>
-        <v-flex>
-          <Sidebar @toggle-drawer="toggleDrawer" :enabled="drawer"/>
-        </v-flex>
-        <v-flex>
-          <Toolbar />
-        </v-flex>
-      </v-layout>
-    </v-container>
-
-
-    <Toolbar />
-    <Sidebar @toggle-drawer="toggleDrawer" :enabled="drawer"/>
-		-->
-    <!--
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-toolbar>i
-i
-    <v-content>i
-      <HelloWorlid/>
-    </v-content>
-    -->
   </v-app>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld'
-//import Toolbar from './components/Toolbar'
-//import Sidebar from './components/Sidebar'
-
 export default {
   name: 'App',
-  components: {
-    //HelloWorld
-    //Toolbar,
-    //Sidebar
-  },
-  data () {
+  data() {
     return {
 			links: [
 				{
@@ -189,19 +133,10 @@ export default {
 	},
 	watch: {
 		$route() {
-			/*
-			var index = this.links.findIndex(link => link.route === this.$route.path)
-			this.toolbarTitle = this.links[index].toolbarTitle
-			*/
 			this.setToolbarTitle()
 		}
 	},
   methods: {
-		/*
-    toggleDrawer(value) {
-      this.drawer = value
-		},
-		*/
 		onResize() {
 			//this.isMobile = window.innerWidth < 600
 			this.isMobile = window.innerWidth < screen.width / 2

@@ -11,12 +11,6 @@
                 <span class="grey--text">A collection of (mostly) personal projects that I've worked on.</span>
               </div>
             </v-card-title>
-            <!--
-            <v-card-title primary-title class="headline">Projects</v-card-title>
-            <v-card-text>
-              A collection of (mostly) personal projects that I've worked on over the last year or so, and some background information behind them.
-            </v-card-text>
-            -->
           </v-card>
         </v-flex>
       </v-layout>
@@ -94,10 +88,7 @@
             </v-card-text>
           </v-card>
         </v-flex>
-      <!--
-      </v-layout>
-      <v-layout>
-        -->
+     
         <v-flex xs12 sm12 md4 justify-center>
           <v-card height="100%">
             <v-card-title primary-title>
@@ -128,11 +119,6 @@
 <script>
 
 export default {
-  data() {
-    return {
-
-    }
-  },
   computed: {
     maxHeight() {
       return screen.height / 3

@@ -25,7 +25,6 @@ export default {
   },
   data() {
     return {
-      //link: "https://docs.google.com/viewer?url=raw.github.com/ZacJoffe/latex-resume/master/resume/zac_joffe_resume.pdf"
       resumeLink: "https://cors-anywhere.herokuapp.com/https://nbviewer.jupyter.org/github/ZacJoffe/latex-resume/blob/master/resume/zac_joffe_resume.pdf" // fix for prod
     }
   },
