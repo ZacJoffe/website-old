@@ -38,15 +38,15 @@
               </v-flex>
             </v-card-title>
             <v-card-text>
-              This is mainly a command line app written in Golang to automate screenshot taking and sharing for my Linux system. Inspired by <a href="https://github.com/ShareX/ShareX">ShareX</a>, an app I used to love back when I used Windows, this app takes screenshots of screen region and copies it to the clipboard. With a flag, you can instead upload the screenshot to <a href="https://imgur.com/">Imgur</a>. 
+              This is mainly a command line app written in Golang to automate taking and sharing screenshots for my Linux system. Inspired by <a href="https://github.com/ShareX/ShareX">ShareX</a>, an app I used to love back when I used Windows, this app takes screenshots of a screen region and copies it to the clipboard. With a flag, you can instead upload the screenshot to Imgur. 
 
-              To do this, I wrote a library to consume Imgur's REST API, as well as reverse engineering the request to use <a href="https://quad.pe/">quad.pe</a>, a lightweight alternative to Imgur. I also wrote libraries to use <a href="https://gfycat.com/">Gfycat</a> for uploading gifs.
+              To do this, I wrote a library to consume Imgur's REST API, as well as reverse engineering the request to use quad.pe, a lightweight alternative to Imgur. I also wrote libraries to use Gfycat for uploading gifs.
 
               To get the clipboard working, I wrote wrapper libraries for both xclip and xsel.
 
               And, lastly, the app was written using <a href="https://github.com/spf13/cobra">Cobra</a>, the same framework used to write the CLI for Docker and Kubernetes.
 
-              I've binded keys to the command via my hotkey manager, so I don't even need a terminal to use it! It was designed specifically for that task and does everything I need it to do.
+              I've binded keys to run the command via my hotkey manager (which can be found in my dotfiles repository, link to that below), so I don't even need a terminal to use it! It was designed specifically for that task and does everything I need it to do.
             </v-card-text>
           </v-card>
         </v-flex>
@@ -67,7 +67,7 @@
               </v-flex>
             </v-card-title>
             <v-card-text>
-              This very website was also a project of mine! Written completely from scratch using Vue.js and Vuetify, I tried to create a simple, intuitive layout that looks good on both desktop and mobile. I've always loved material design and Vuetify is a pleasure to develop with.
+              This very website is also a project of mine! Written completely from scratch using Vue.js and Vuetify, I tried to create a simple and intuitive layout that looks good on both desktop and mobile. I've always loved material design and Vuetify is a pleasure to develop with.
             </v-card-text>
           </v-card>
         </v-flex>
@@ -93,6 +93,28 @@
           </v-card>
         </v-flex>
       </v-layout>
+        <v-flex justify-center>
+          <v-card>
+            <v-card-title primary-title>
+              <span class="headline">Rubik's Cube Solving Robot</span>
+              <v-flex text-xs-right>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on }">
+                    <v-btn small icon href="https://github.com/ZacJoffe/two-by-two-solver" v-on="on">
+                      <v-icon>mdi-git</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Source Code</span>
+                </v-tooltip>
+              </v-flex>
+            </v-card-title>
+            <v-card-text>
+              For our final project in my first semester, we had to build a Lego Mindstorm EV3 robot to do something cool. Me and two other people build a robot that solves a 2x2 Rubik's cube.
+
+              We used an open source algorithm to determine the solution of a given scramble, and the robot executed the moves to solve the cube generally in 10 turns or less.
+            </v-card-text>
+          </v-card>
+        </v-flex>
     </v-container>
   </div>
 </template>
