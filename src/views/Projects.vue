@@ -24,12 +24,8 @@
       <v-layout row wrap>
         <v-flex justify-center>
           <v-card>
-            <v-card-title primary-title class="headline"><a href="https://github.com/ZacJoffe/screenshot">Screenshot App</a></v-card-title>
-
             <v-card-title primary-title>
-              <v-flex>
                 <span class="headline">Screenshot App</span>
-              </v-flex>
               <v-flex text-xs-right>
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">
