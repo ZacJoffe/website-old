@@ -25,7 +25,7 @@
         <v-flex justify-center>
           <v-card>
             <v-card-title primary-title>
-                <span class="headline">Screenshot App</span>
+              <span class="headline">Screenshot App</span>
               <v-flex text-xs-right>
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">
@@ -53,7 +53,19 @@
 
         <v-flex justify-center>
           <v-card>
-            <v-card-title primary-title class="headline">Website</v-card-title>
+            <v-card-title primary-title>
+              <span class="headline">Website</span>
+              <v-flex text-xs-right>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on }">
+                    <v-btn small icon href="https://github.com/ZacJoffe/website" v-on="on">
+                      <v-icon>mdi-git</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Source Code</span>
+                </v-tooltip>
+              </v-flex>
+            </v-card-title>
             <v-card-text>
               This very website was also a project of mine! Written completely from scratch using Vue.js and Vuetify, I tried to create a simple, intuitive layout that looks good on both desktop and mobile. I've always loved material design and Vuetify is a pleasure to develop with.
             </v-card-text>
@@ -62,7 +74,19 @@
 
         <v-flex justify-center>
           <v-card>
-            <v-card-title primary-title class="headline">Linux Configuration</v-card-title>
+            <v-card-title primary-title>
+              <span class="headline">Linux Configuration</span>
+              <v-flex text-xs-right>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on }">
+                    <v-btn small icon href="https://github.com/ZacJoffe/dotfiles" v-on="on">
+                      <v-icon>mdi-git</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Source Code</span>
+                </v-tooltip>
+              </v-flex>
+            </v-card-title>
             <v-card-text>
               Over the last year or so, I've been working on tweaking my Arch Linux install to be perfect for my workflow. It's an ongoing process as my workflow changes over time, and there's never the <i>perfect</i> setup, but I feel as if I've gotten pretty close. I've written many shell scripts and custom configuration files for it.
             </v-card-text>
