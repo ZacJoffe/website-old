@@ -4,7 +4,12 @@
       <v-layout row wrap>
         <v-flex justify-center>
           <v-card>
-            <v-img :src="require('../assets/photo.jpg')"/>
+            <div v-if="isMobile">
+              <v-img :maxHeight="maxHeight" :src="require('../assets/photo_cropped.jpg')"/>
+            </div>
+            <div v-else>
+              <v-img :maxHeight="maxHeight" :src="require('../assets/photo_very_cropped.jpg')"/>
+            </div>
             <v-card-title primary-title>
               <div>
                 <div class="headline">Zac Joffe</div>
@@ -36,8 +41,13 @@
 <script>
 
 export default {
-  components: {
-
+  props: {
+    isMobile: Boolean
+  },
+  computed: {
+    maxHeight() {
+      return screen.height / 1.75
+    }
   }
 }
 </script>

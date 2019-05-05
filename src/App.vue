@@ -79,7 +79,7 @@
 			<transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeInUp">
 				-->
 			<transition name="fade">
-				<router-view></router-view>
+				<router-view :isMobile="isMobile"></router-view>
 			</transition>
 		</v-content>
 		<!--
@@ -191,9 +191,11 @@ export default {
 		}
 	},
   methods: {
+		/*
     toggleDrawer(value) {
       this.drawer = value
 		},
+		*/
 		onResize() {
 			//this.isMobile = window.innerWidth < 600
 			this.isMobile = window.innerWidth < screen.width / 2
@@ -206,7 +208,7 @@ export default {
 	computed: {
 		isMini() {
 			return (this.mini && !this.isMobile)
-		},
+		}
 	}
 }
 </script>
