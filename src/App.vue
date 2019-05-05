@@ -159,6 +159,12 @@ export default {
 					toolbarTitle: "My Resume",
 					icon: "mdi-file-document-box",
 					route: "/resume"
+				},
+				{
+					title: "Contact",
+					toolbarTitle: "Contact Information",
+					icon: "mdi-contacts",
+					route: "/contact"
 				}
 			],
 			toolbarTitle: "Zac Joffe",

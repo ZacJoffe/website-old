@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Projects from './views/Projects.vue'
 import Resume from './views/Resume.vue'
+import Contact from './views/Contact.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/resume',
       name: 'resume',
       component: Resume
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
     }
   ]
 })
