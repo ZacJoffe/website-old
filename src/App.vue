@@ -100,6 +100,12 @@ export default {
 					route: "/projects"
 				},
 				{
+					title: "Experience",
+					toolbarTitle: "Past Experience",
+					icon: "",
+					route: "/experience"
+				},
+				{
 					title: "Resume",
 					toolbarTitle: "My Resume",
 					icon: "mdi-file-document-box",
