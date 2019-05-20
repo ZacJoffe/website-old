@@ -9,6 +9,7 @@
               <ul>
                 <li>Personal email: zacharyjoffe@gmail.com</li>
                 <li>School email: zmjoffe@edu.uwaterloo.ca</li>
+                <li>Phone number: (647) 523-3137</li>
               </ul>
             </v-card-text>
           </v-card>
