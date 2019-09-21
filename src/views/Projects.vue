@@ -19,6 +19,33 @@
         <v-flex justify-center>
           <v-card>
             <v-card-title primary-title>
+              <span class="headline">Tetris</span>
+              <v-flex text-xs-right>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on }">
+                    <v-btn small icon href="https://github.com/ZacJoffe/sdl-tetris" v-on="on">
+                      <v-icon>mdi-git</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Source Code</span>
+                </v-tooltip>
+              </v-flex>
+            </v-card-title>
+            <v-card-text>
+              I've always wanted to write some sort of Tetris clone. Last year I started writing it in Lua with the LÖVE framework (which I experimented with back in high school), but got bogged down by school and job searching to really get into it.
+
+              So when I realized I had the time, I jumped on the opportunity. I took this project as a way to further familiarize myself with C++ and learn about SDL2 and game development. It was a lot of work, but I'm very happy with the results and cannot wait to do something like this again in the future!
+
+              My goal was to make an accurate clone of the original game. I developed several data structures to handle things like the tetromino queue, screen objects, and piece holding. It was a very fun project; I learnt a lot about C++, 2D graphics, game development and SDL2.
+            </v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
+
+      <v-layout>
+        <v-flex justify-center>
+          <v-card>
+            <v-card-title primary-title>
               <span class="headline">Screenshot App</span>
               <v-flex text-xs-right>
                 <v-tooltip bottom>
