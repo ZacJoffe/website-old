@@ -29,11 +29,9 @@
           <v-card>
             <v-card-title primary-title class="headline">Programming Prospects</v-card-title>
             <v-card-text>
-              Currently, I'm working as a Full Stack Developer at Emailtopia. I love exposing myself to other branches of software development on my own time. For future projects, I want to learn SDL2 and make some games in C++, and maybe try out the SDL bindings for Golang. I'm also very interested in making an NES emulator.
-              
-              As for languages, I'm very interested in learning Rust.
+              Currently, I'm in my 2A term in Software Engineering. I'm looking for a 4 month position for the winter term (January - April), but I'll still do my best to keep programming on my own time and learning as much as I can.
 
-              I'd love to further contribute to open source projects that I often use and am passionate about (projects like Visual Studio Code, DXVK, Alacritty, QMK, etc).
+              For the future, I'd love to focus on contributing to projects I'm passionate about. I'd also like to learn Rust and develop something with it.
             </v-card-text>
           </v-card>
         </v-flex>
