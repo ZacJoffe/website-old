@@ -32,11 +32,11 @@
               </v-flex>
             </v-card-title>
             <v-card-text>
-              I've always wanted to write some sort of Tetris clone. Last year I started writing it in Lua with the LÖVE framework (which I experimented with back in high school), but got bogged down by school and job searching to really get into it.
+              I've always wanted to write a Tetris clone. Last year I started writing it in Lua with the LÖVE framework (which I experimented with back in high school) but got bogged down by school and job searching to really get into it.
 
-              So when I realized I had the time, I jumped on the opportunity. I took this project as a way to further familiarize myself with C++ and learn about SDL2 and game development. It was a lot of work, but I'm very happy with the results and cannot wait to do something like this again in the future!
+              So when I realized I had the time, I jumped on the opportunity. I took this project as a way to further familiarize myself with C++ and learn about SDL2 and game development. It was a lot of work, but I'm thrilled with the results and cannot wait to do something like this again in the future!
 
-              My goal was to make an accurate clone of the original game. I developed several data structures to handle things like the tetromino queue, screen objects, and piece holding. It was a very fun project; I learnt a lot about C++, 2D graphics, game development and SDL2.
+              My goal was to make an accurate clone of the original game. I developed several data structures to handle things like the tetromino queue, screen objects, and piece holding. It was an enjoyable project; I learnt a lot about C++, 2D graphics, game development and SDL2.
             </v-card-text>
           </v-card>
         </v-flex>
@@ -61,13 +61,13 @@
             <v-card-text>
               This is mainly a command line app written in Golang to automate taking and sharing screenshots for my Linux system. Inspired by <a href="https://github.com/ShareX/ShareX">ShareX</a>, an app I used to love back when I used Windows, this app takes screenshots of a screen region and copies it to the clipboard. With a flag, you can instead upload the screenshot to Imgur. 
 
-              To do this, I wrote a library to consume Imgur's REST API, as well as reverse engineering the request to use quad.pe, a lightweight alternative to Imgur. I also wrote libraries to use Gfycat for uploading gifs.
+              To do this, I wrote a library to consume Imgur's REST API, as well as reverse-engineering the request to use quad.pe, a lightweight alternative to Imgur. I also wrote libraries to use Gfycat for uploading gifs.
 
               To get the clipboard working, I wrote wrapper libraries for both xclip and xsel.
 
               And, lastly, the app was written using <a href="https://github.com/spf13/cobra">Cobra</a>, the same framework used to write the CLI for Docker and Kubernetes.
 
-              I've binded keys to run the command via my hotkey manager (which can be found in my dotfiles repository, link to that below), so I don't even need a terminal to use it! It was designed specifically for that task and does everything I need it to do.
+              I've bound keys to run the command via my hotkey manager (which can be found in my dotfiles repository, link to that below), so I don't even need a terminal to use it! It was designed specifically for that task and does everything I need it to do.
             </v-card-text>
           </v-card>
         </v-flex>
@@ -90,7 +90,7 @@
               </v-flex>
             </v-card-title>
             <v-card-text>
-              This very website is also a project of mine! Written completely from scratch using Vue.js and Vuetify, I tried to create a simple and intuitive layout that looks good on both desktop and mobile. I've always loved material design and Vuetify is a pleasure to develop with.
+              This very website is also a project of mine! Written entirely from scratch using Vue.js and Vuetify, I tried to create a simple and intuitive layout that looks good on both desktop and mobile. I've always loved material design, and Vuetify is a pleasure to develop with.
             </v-card-text>
           </v-card>
         </v-flex>
@@ -132,7 +132,7 @@
               </v-flex>
             </v-card-title>
             <v-card-text>
-              For our final project in my first semester, we had to build a Lego Mindstorm EV3 robot to do something cool. Me and two other people build a robot that solves a 2x2 Rubik's cube.
+              For our final project in my first semester, we had to build a Lego Mindstorm EV3 robot to do something cool. Me and two other people made a robot that solves a 2x2 Rubik's cube.
 
               We used an open source algorithm to determine the solution of a given scramble, and the robot executed the moves to solve the cube generally in 10 turns or less.
             </v-card-text>
