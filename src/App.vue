@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+	<v-app dark>
 		<v-navigation-drawer :mini-variant="isMini" :clipped="mini" :temporary="temp" width="250" v-model="drawer" app>
 			<v-list dense class="pt-0">
 				<div v-if="!isMobile">

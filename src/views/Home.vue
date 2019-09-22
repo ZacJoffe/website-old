@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     maxHeight() {
-      return screen.height / 1.75
+      return this.isMobile ? screen.height : screen.height / 1.5
     }
   }
 }
